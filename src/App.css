@@ -1,0 +1,69 @@
+.App {
+    display: flex;
+    justify-content: center;
+}
+
+.filter-container {
+    padding: 1rem 0;
+}
+
+.filter-container label {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.filter-container select {
+    display: block;
+    margin: 0.5rem 0;
+    width: 140px;
+}
+
+select {
+    border: none;
+    background: #ececec;
+    height: 1.9rem;
+    width: max-content;
+    border-radius: 6px;
+    padding: 4px;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.card-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.agent-card {
+    display: flex;
+    gap: 1rem;
+    width: 20rem;
+    padding: 1rem;
+    background: aliceblue;
+    border-radius: 6px;
+}
+
+.avatar-wrapper {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 60px;
+}
+
+.avatar-wrapper img {
+    object-fit: cover;
+}
+
+.card-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.status {
+    color: red;
+}
+.status.status-online {
+    color: green;
+}

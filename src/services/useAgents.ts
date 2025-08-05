@@ -1,6 +1,6 @@
 import {useQuery} from "@tanstack/react-query";
 
-export type AgentStatus = 'online' | 'offline';
+export enum AgentStatus {Online = 'online', Offline = 'offline'}
 
 export type AgentProfileType = 'admin' | 'agent';
 
@@ -31,8 +31,8 @@ export function useAgents(): AgentsResponse {
 
         if (agents) {
             agents.sort(function(a, b) {
-                if (a.status === 'online' && b.status !== 'online') return -1;
-                if (a.status !== 'online' && b.status === 'online') return 1;
+                if (a.status === AgentStatus.Online && b.status !== AgentStatus.Online) return -1;
+                if (a.status !== AgentStatus.Online && b.status === AgentStatus.Online) return 1;
                 return a.first_name.localeCompare(b.first_name);
             });
         }
